@@ -59,6 +59,5 @@ import smile.sequence._
 import smile.projection._
 import smile.nlp._
 import smile.wavelet._
-import smile.shell._
 
 // In the below, add anything you want to execute at the start of the Shell session.

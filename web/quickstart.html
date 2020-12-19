@@ -112,14 +112,6 @@ smile&gt;
                 each operator by typing <code>help("command")</code>, e.g.
                 <code>help("svm")</code>. To exit the shell, type <code>exit</code>.</p>
 
-            <p>In the shell, type <code>demo</code> to bring up the demo window,
-                which shows off various Smile's machine learning capabilities.</p>
-
-            <p>You can also type <code>benchmark()</code> to see Smile's performance
-                on a couple of test data. You can run a particular benchmark by
-                <code>bencharm("test name")</code>, where test name could be "airline",
-                "usps", etc.</p>
-
             <p>On startup, the shell analyzes the classpath and creates a database of every visible package and path.
                 This is available via tab-completion analogous to the path-completion available in most shells.
                 If you type a partial path, tab will complete as far as it can and show you your options
@@ -254,15 +246,8 @@ smile&gt;
 
     jshell>
     </code></pre>
-            <p>To exit the shell, type <code>/exit</code>.</p>
-
-            <p>In the shell, run the below code to bring up the demo window,
-                which shows off various Smile's machine learning capabilities.</p>
-            <pre class="prettyprint lang-java"><code>
-    javax.swing.SwingUtilities.invokeLater(() -> smile.demo.SmileDemo.createAndShowGUI(false))
-    </code></pre>
-
-            <p>Similar to Smile Shell, we pre-import Smile's definitions in JShell.</p>
+            <p>Similar to Smile Shell, we pre-import Smile's definitions in JShell.
+                To exit the shell, type <code>/exit</code>.</p>
 
             <h3 id="calculator_java">Calculator</h3>
 
