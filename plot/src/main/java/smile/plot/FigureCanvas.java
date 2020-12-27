@@ -22,34 +22,21 @@ package smile.plot;
  *
  * @author Haifeng Li
  */
-public abstract class FigureCanvas {
-    /** The figure on the canvas. */
-    private final Figure figure;
-
-    /**
-     * Constructor.
-     * @param figure the figure on the canvas.
-     */
-    public FigureCanvas(Figure figure) {
-        this.figure = figure;
-    }
-
+public interface FigureCanvas {
     /**
      * Returns the figure.
      * @return the figure.
      */
-    public Figure figure() {
-        return figure;
-    }
-
-    /** Paints the figure on the canvas. */
-    public void paint() {
-        figure.paint(renderer());
-    }
+    Figure figure();
 
     /**
      * Returns the renderer of the canvas.
      * @return the renderer of the canvas.
      */
-    public abstract Renderer renderer();
+    Renderer renderer();
+
+    /** Paints the figure on the canvas. */
+    default void paint() {
+        figure().paint(renderer());
+    }
 }
