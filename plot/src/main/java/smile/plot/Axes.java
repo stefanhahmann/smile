@@ -29,5 +29,9 @@ package smile.plot;
  *
  * @author Haifeng Li
  */
-public class Axes {
+public class Axes implements Shape {
+    @Override
+    public void paint(Renderer renderer) {
+
+    }
 }

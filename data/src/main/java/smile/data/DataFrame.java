@@ -983,7 +983,7 @@ public interface DataFrame extends Dataset<Tuple>, Iterable<BaseVector> {
      * Returns a new DataFrame with given columns converted to nominal.
      *
      * @param columns column names. If empty, all object columns
-     *             in the data frame will be converted.
+     *        in the data frame will be converted.
      * @return a new DataFrame.
      */
     default DataFrame factorize(String... columns) {

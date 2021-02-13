@@ -23,33 +23,41 @@ package smile.plot;
  * specified in the percentage of canvas width and height, respectively.
  */
 public class Margin {
-    /** The bottom margin. */
-    public final double bottom;
-    /** The left margin. */
+    /** The left margin, as a fraction of the figure width. */
     public final double left;
-    /** The top margin. */
-    public final double top;
-    /** The right margin. */
+    /** The right margin, as a fraction of the figure width. */
     public final double right;
+    /** The bottom margin, as a fraction of the figure height. */
+    public final double bottom;
+    /** The top margin, as a fraction of the figure height. */
+    public final double top;
+    /** The width of the padding between subplots, as a fraction of the average axes width. */
+    public final double wspace;
+    /** The height of the padding between subplots, as a fraction of the average axes height. */
+    public final double hspace;
 
     /**
      * Constructor with default margins.
      */
     public Margin() {
-        this(0.15, 0.12, 0.12, 0.06);
+        this(0.12, 0.15, 0.06, 0.12, 0.01, 0.01);
     }
 
     /**
      * Constructor.
-     * @param bottom the bottom margin.
-     * @param left the left margin.
-     * @param top the top margin.
-     * @param right the right margin.
+     * @param bottom the bottom margin, as a fraction of the figure height.
+     * @param left the left margin, as a fraction of the figure width.
+     * @param top the top margin, as a fraction of the figure height.
+     * @param right the right margin, as a fraction of the figure width.
+     * @param wspace the width of the padding between subplots.
+     * @param hspace the height of the padding between subplots.
      */
-    public Margin(double bottom, double left, double top, double right) {
-        this.bottom = bottom;
+    public Margin(double left, double bottom, double right, double top, double wspace, double hspace) {
         this.left = left;
-        this.top = top;
+        this.bottom = bottom;
         this.right = right;
+        this.top = top;
+        this.wspace = wspace;
+        this.hspace = hspace;
     }
 }

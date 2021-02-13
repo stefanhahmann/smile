@@ -17,12 +17,25 @@
 
 package smile.plot;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * The top level container for all the plot elements.
  *
  * @author Haifeng Li
  */
 public class Figure implements Shape {
+    /** The axes stack. */
+    private List<Axes> axes;
+    /** The margin around the figure. */
+    private Margin margin;
+
+    public Figure() {
+        axes = new ArrayList<>();
+        margin = new Margin();
+    }
+
     @Override
     public void paint(Renderer renderer) {
 
